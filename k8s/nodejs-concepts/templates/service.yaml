@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nodejs-concepts
+  name: nodejs-concepts
+spec:
+  ports:
+    - name: nodejs-concepts
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: nodejs-concepts
+  type: NodePort
+status:
+  loadBalancer: {}

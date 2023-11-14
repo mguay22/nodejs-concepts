@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nodejs-concepts
+  name: nodejs-concepts
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-concepts
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nodejs-concepts
+    spec:
+      containers:
+      - image: mguay22/nodejs-concepts:latest
+        name: nodejs-concepts
+        ports:
+        - containerPort: 3000
+        resources: {}
+status: {}
